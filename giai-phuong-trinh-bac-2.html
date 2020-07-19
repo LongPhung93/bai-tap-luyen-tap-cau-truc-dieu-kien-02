@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script !src="">
+    let a = parseInt(prompt("Nhập vào giá trị hệ số a: "));
+    let b = parseInt(prompt("Nhập vào giá trị hệ số b: "));
+    let c = parseInt(prompt("Nhập vào giá trị hệ số c: "));
+
+    if (a == 0) {
+        document.write("Đây không phải là phương trình bậc 2");
+    } else {
+        let delta = b * b - 4 * a * c;
+        if (delta < 0) {
+            document.write("Phương trình vô nghiệm");
+        } else if (delta == 0) {
+            let x1 = (-b) / (2 * a);
+            document.write("Phương trình có nghiệm kép: " + x1);
+        } else {
+            let x2 = (-b + Math.sqrt(delta)) / (2 * a);
+            let x3 = (-b - Math.sqrt(delta)) / (2 * a);
+            document.write("Phương trình có 2 nghiệm riêng biệt: " + x2 + " " + "và" + " " + x3);
+        }
+    }
+</script>
+</body>
+</html>
